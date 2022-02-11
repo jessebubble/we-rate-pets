@@ -1,0 +1,20 @@
+<div class="col-12 d-flex justify-content-center">
+    <div class="card">
+        <div class="card-header">
+            {{title}}
+        </div>
+        <div class="card-body">
+            <div class="d-flex justify-content-center"></div>
+                <img src="{{img_url}}"  width="320px" height="300px" alt="">
+            </div>
+            <p class="card-text">{{post_body}}</p>
+            <div class="d-flex justify-content-center">
+                <button id="comment-btn" class="btn btn-primary">Rate My Pet!</button>
+            </div>
+            <div class="d-flex justify-content-between">
+                <div id="post-by">Posted by {{user.username}} on Date</div>
+                <div id="comments-count">({{post.comments.length}})Comments</div>
+            </div>
+        </div>
+    </div>
+</div> 
