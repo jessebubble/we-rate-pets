@@ -4,6 +4,7 @@ const routes = require('./controllers');
 const sequelize = require('./config/connection.js');
 const path = require('path');
 const exphbs = require('express-handlebars');
+const helpers = require('./utils/helpers');
 const hbs = exphbs.create({ helpers });
 const session = require('express-session');
 const bcrypt = require('bcrypt'); // need to call this somewhere...will research modules
