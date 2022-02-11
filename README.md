@@ -12,15 +12,15 @@
 * [Repo & Deployment](#Repo-and-Deployment-via-Heroku)
 
 ## Installation
-* This project uses a wide range of npm packages:
-    - Express.js
-    - Bcrypt
-    - dotenv
-    - Handlebars.js
-    - Express-Session
-    - connect-session-sequelize
-    - mysql2
-    - Sequelize
+* This project uses a wide range of npm packages: (installing these packages require `npm install`)
+    - ` express `
+    - ` bcrypt `
+    - ` dotenv `
+    - ` express-handlebars `
+    - ` express-session `
+    - ` connect-session-sequelize `
+    - ` mysql2 `
+    - ` sequelize `
 * Installation also includes: 
     - Node.js
     - MySQL
@@ -46,5 +46,10 @@
 * Courtney Evins
 * Margaret Barrera
 
-## Repo and Deployment via Heroku
+## Tests
+ - This project doesn't include jest to be tested.
 
+## Repo and Deployment via Heroku
+* ( ◑‿◑)ɔ┏🍟--🍔┑٩(^◡^ )
+* [repo link goes here ]
+* [deploy link via heroku goes here ]
