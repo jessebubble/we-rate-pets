@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const { User, Post } = require("../../models");
-// const withAuth = require('../../'); //reference in  module 14.5.5
+const withAuth = require('../../utils/auth'); //reference in  module 14.5.5
 
 router.get('/', (req, res) => { // GET
     User.findAll({ // all users
@@ -64,7 +64,7 @@ router.post('/', (req, res) => { // POST
         });
     })
 });
-router.post('/login', (req, res) => {
+router.post('/login', (req, res) => { //compares login entered to dbUserData
     User.findOne({
         where: {
             username: req.body.username
@@ -90,7 +90,7 @@ router.post('/login', (req, res) => {
         });
     });
 });
-router.post('/signup', (req, res) => {
+router.post('/signup', (req, res) => { // compares signup info entered with whats saved in dbUserData
     User.findOne({
         where: {
             username: req.body.username
@@ -104,6 +104,34 @@ router.post('/signup', (req, res) => {
         res.json(dbUserData);
     })
 });
-router.delete('/:id', withAuth, (req, res => {
-    
-}))
+router.delete('/:id', withAuth, (req, res) => { //removes user 
+    User.destroy({
+        where: {
+            id: req.params.id
+        }
+    })
+    .then(dbUserData => {
+        if (!dbUserData) {
+            res.status(404).json({ message: 'No user found with this id' });
+            return;
+        }
+        res.json(dbUserData);
+    })
+    .catch(err => {
+        console.log(err);
+        res.status(500).json(err);
+    });
+});
+router.post('/logout', (req, res) => { // logouts user
+    console.log(req.session.loggedIn);
+    if (req.session.loggedIn) {
+        req.session.destroy(() => {
+            res.status(204).end();
+        });
+    }
+    else {
+        res.status(404).end();
+    }
+});
+
+module.exports = router;
