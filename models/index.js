@@ -1,5 +1,6 @@
 //import all models
 const User = require('./user.js');
+const Post = require('./Post');
 const Comment = require('./Comment.js')
 
 // create associations 
