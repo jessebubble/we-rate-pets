@@ -9,7 +9,7 @@
 * [Usage](#usage)
 * [Collaborators](#collaborators)
 * [Tests](#tests)
-* [Repo](#repo)
+* [Repo & Deployment](#Repo-and-Deployment-via-Heroku)
 
 ## Installation
 * This project uses a wide range of npm packages:
