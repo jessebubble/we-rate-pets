@@ -17,7 +17,7 @@
       <input name="post-body" type="text" value="{{post.post_text}}" />
     </div>
     <div>
-      by you on Date
+      by you on {{format_date created_at}}
       |
       <a href="/post/{{post.id}}">{{post.comments.length}} Comment(s)</a>
     </div>
