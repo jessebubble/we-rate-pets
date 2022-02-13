@@ -39,6 +39,7 @@ router.get('/', (req, res) => {
         res.status(500).json(err);
     });
 });
+
 router.get('/login', (req, res) => { // takes user to login page
     if (req.session.loggedIn) {
         res.redirect('/');
@@ -46,13 +47,15 @@ router.get('/login', (req, res) => { // takes user to login page
     }
     res.render('login');
 });
+
 router.get('/signup', (req, res) => { // takes user to signup page
     if (req.session.loggedIn) {
         res.redirect('/');
         return;
     }
-    res.render('signup');
+    res.render('login');
 });
+
 router.get('/post/:id', (req, res) => { // gets single post and comments from attributes
     Post.findOne({
         where: {

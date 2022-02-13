@@ -54,7 +54,7 @@ router.post('/', (req, res) => { // POST
         username: req.body.username,
         password: req.body.password
     })
-    then(dbUserData => { // reference module 14.2.5
+    .then(dbUserData => { // reference module 14.2.5
         req.session.save(() => { // gives server easy acces to user_id and username and confirmation of login
             req.session.user_id = dbUserData.id;
             req.session.username = dbUserData.username;
@@ -63,7 +63,12 @@ router.post('/', (req, res) => { // POST
             res.json(dbUserData);
         });
     })
+    .catch(err => {
+        console.log(err);
+        res.status(500).json(err);
+    });
 });
+
 router.post('/login', (req, res) => { //compares login entered to dbUserData
     User.findOne({
         where: {
@@ -90,6 +95,7 @@ router.post('/login', (req, res) => { //compares login entered to dbUserData
         });
     });
 });
+
 router.post('/signup', (req, res) => { // compares signup info entered with whats saved in dbUserData
     User.findOne({
         where: {
@@ -104,6 +110,7 @@ router.post('/signup', (req, res) => { // compares signup info entered with what
         res.json(dbUserData);
     })
 });
+
 router.delete('/:id', withAuth, (req, res) => { //removes user 
     User.destroy({
         where: {
@@ -122,6 +129,7 @@ router.delete('/:id', withAuth, (req, res) => { //removes user
         res.status(500).json(err);
     });
 });
+
 router.post('/logout', (req, res) => { // logouts user
     console.log(req.session.loggedIn);
     if (req.session.loggedIn) {
