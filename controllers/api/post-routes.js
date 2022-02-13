@@ -11,7 +11,7 @@ router.get('/', withAuth, (req, res) => {
         attributes: [
             'id',
             'title',
-            'contents',
+            'image_url',
             'created_at',
         ],
         order: [['created_at', 'DESC']],
@@ -44,7 +44,7 @@ router.get('/:id', (req, res) => {
         attributes: [
             'id',
             'title',
-            'contents',
+            'image_url',
             'created_at',
         ],
         include: [
@@ -78,7 +78,7 @@ router.post('/', withAuth, (req, res) => {
     if (req.session) {
         Post.create({ // creates new POST for user loggedin
             title: req.body.title,
-            contents: req.body.contents,
+            image_url: req.body.image_url,
             user_id: req.session.user_id
         })
         .then(dbPostData => res.json(dbPostData))
@@ -92,7 +92,7 @@ router.put('/:id', withAuth, (req, res) => {
     Post.update(
         {
             title: req.body.title,
-            contents: req.body.contents
+            image_url: req.body.image_url
         },
         {
             where: {
