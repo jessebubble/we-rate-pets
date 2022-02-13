@@ -18,6 +18,14 @@
     "express-handlebars": "^6.0.2",
     "express-session": "^1.17.2",
     "mysql2": "^2.3.3",
-    "sequelize": "^6.16.0"
-  }
+    "sequelize": "^6.16.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jessebubble/we-rate-pets.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jessebubble/we-rate-pets/issues"
+  },
+  "homepage": "https://github.com/jessebubble/we-rate-pets#readme"
 }
