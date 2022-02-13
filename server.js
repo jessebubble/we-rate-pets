@@ -34,7 +34,7 @@ const sess = {
 
 app.use(session(sess)); // connects session to Sequelize database (reference module 14.2.5)
 
-app.use(session(sesh));
+app.use(session(sess));
 // if there is inactivity for 30 minutes, the session expires
 app.get('/session', function(req, res, next) {
   if(req.session.views){
