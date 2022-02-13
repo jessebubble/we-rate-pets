@@ -18,6 +18,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
+// app.set('views', path.join(__dirname, 'views' )); troubleshooting mysql error
 
 // connects session to Sequelize database (reference module 14.2.5)
 const SequelizeStore = require('connect-session-sequelize')(session.Store);

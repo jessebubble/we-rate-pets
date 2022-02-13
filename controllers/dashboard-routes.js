@@ -12,6 +12,7 @@ router.get('/', withAuth, (req, res) => {
             'id',
             'title',
             'image_url',
+            'post_body',
             'created_at',
         ],
         include: [
@@ -44,7 +45,9 @@ router.get('/edit/:id', withAuth, (req, res) => {
             'id',
             'title',
             'image_url',
+            'post_body',
             'created_at',
+            
         ],
         include: [
             {
