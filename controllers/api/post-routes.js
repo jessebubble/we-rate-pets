@@ -37,6 +37,7 @@ router.get('/', withAuth, (req, res) => {
         res.status(500).json(err);
     }); 
 });
+
 router.get('/:id', (req, res) => {
     Post.findOne({ //gets sinle post
         where: {
@@ -76,6 +77,7 @@ router.get('/:id', (req, res) => {
         res.status(500).json(err);
     });
 });
+
 router.post('/', withAuth, (req, res) => {
     if (req.session) {
         Post.create({ // creates new POST for user loggedin
@@ -91,6 +93,7 @@ router.post('/', withAuth, (req, res) => {
         });
     }
 });
+
 router.put('/:id', withAuth, (req, res) => {
     Post.update(
         {
