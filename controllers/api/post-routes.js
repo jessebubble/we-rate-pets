@@ -11,14 +11,15 @@ router.get('/', withAuth, (req, res) => {
         attributes: [
             'id',
             'title',
-            'contents',
+            'image_url',
+            'post_body',
             'created_at',
         ],
         order: [['created_at', 'DESC']],
         include: [
             {
                 model: Comment,
-                attributes: ['id', 'comment_text', 'post_id', 'user_id', 'created_at'],
+                attributes: ['comment_id', 'comment_text', 'post_id', 'user_id', 'created_at'],
                 include: {
                     model: User,
                     attributes: ['username']
@@ -44,13 +45,14 @@ router.get('/:id', (req, res) => {
         attributes: [
             'id',
             'title',
-            'contents',
+            'image_url',
+            'post_body',
             'created_at',
         ],
         include: [
             {
                 model: Comment, // include user comments
-                attributes: ['id', 'comment_text', 'post_id', 'user_id', 'created_at'],
+                attributes: ['comment_id', 'comment_text', 'post_id', 'user_id', 'created_at'],
                 include: {
                     model: User,
                     attributes: ['username']
@@ -78,7 +80,8 @@ router.post('/', withAuth, (req, res) => {
     if (req.session) {
         Post.create({ // creates new POST for user loggedin
             title: req.body.title,
-            contents: req.body.contents,
+            image_url: req.body.image_url,
+            post_body: req.body.post_body,
             user_id: req.session.user_id
         })
         .then(dbPostData => res.json(dbPostData))
@@ -92,7 +95,8 @@ router.put('/:id', withAuth, (req, res) => {
     Post.update(
         {
             title: req.body.title,
-            contents: req.body.contents
+            image_url: req.body.image_url,
+            post_body: req.body.post_body
         },
         {
             where: {

@@ -20,9 +20,9 @@ Post.init(
       image_url: {
         type: DataTypes.STRING,
         allowNull: false,
-        validate: {
-          isURL: true
-        }
+       // validate: {
+        //  isURL: true
+       // }
       },
       post_body: {
         type: DataTypes.STRING,
