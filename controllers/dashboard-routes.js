@@ -39,6 +39,7 @@ router.get('/', withAuth, (req, res) => {
         res.status(500).json(err);
     });
 });
+
 router.get('/edit/:id', withAuth, (req, res) => {
     Post.findByPk(req.params.id, { // finds user post by id so user can edit 
         attributes: [

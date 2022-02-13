@@ -18,4 +18,21 @@
     </form>
 </section>
 
+{{#if posts.length}}
+<section>
+  <h2>Your Posts</h2>
+    {{#each posts as |post|}}
+    {{> post-info post}}
+    <div class="container-xxl">
+      <div class="row">
+        <div class ="col-6">
+          <a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit post</a>
+        </div>
+      </div>
+    </div>
+    {{/each}}
+</section>
+{{/if}}
+
+
 <script src="/javascript/create-post.js"></script>
