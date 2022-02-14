@@ -58,10 +58,19 @@ nav a:hover{
     text-align: center;
 }
 
+.card-header-link{
+    color: var(--prime-text-color);
+    text-decoration: none;
+}
+
 #post-by, #comments-count{
     font-size: 14px;
 }
 
 #comment-btn{
     margin-bottom: 20px;
+}
+
+#comments-count{
+    color: black;
 }

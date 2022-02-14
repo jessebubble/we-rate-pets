@@ -90,7 +90,7 @@ router.get('/post/:id', (req, res) => { // gets single post and comments from at
         }
         const post = dbPostData.get({ plain: true }); 
 
-        res.render('single-post', { 
+        res.render('post-comment', { 
             post,
             loggedIn: req.session.loggedIn
         });
