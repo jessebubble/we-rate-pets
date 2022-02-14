@@ -14,11 +14,11 @@
     </div>
     <div>
       <h4>Post:</h4>
-      <input name="post-body" type="text" value="{{post.post_text}}" />
+      <input name="post-body" type="text" value="{{post.post_body}}" />
     </div>
     <div>
-      by you on {{format_date created_at}}
-      |
+      from {{format_date post.created_at}}
+      with 
       <a href="/post/{{post.id}}">{{post.comments.length}} Comment(s)</a>
     </div>
     <button type="submit">Save Edits</button>
