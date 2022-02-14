@@ -12,6 +12,7 @@ router.get('/', (req, res) => { // GET
         res.status(500).json(err);
     });
 });
+
 router.get('/:id', (req, res) => { // GET
     User.findOne({ // one user
         attributes: { exclude: ['password'] }, // exclude password
@@ -49,6 +50,7 @@ router.get('/:id', (req, res) => { // GET
         res.status(500).json(err);
     });
 });
+
 router.post('/', (req, res) => { // POST
     User.create({ // creates a new user
         username: req.body.username,
@@ -141,5 +143,6 @@ router.post('/logout', (req, res) => { // logouts user
         res.status(404).end();
     }
 });
+
 
 module.exports = router;

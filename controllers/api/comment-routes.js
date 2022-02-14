@@ -26,10 +26,35 @@ router.post('/', (req, res) => { // adds a comment
     }
 });
 
-router.delete('/:id', withAuth, (req, res) => { // deletes a comment
+// updates a comment
+router.put('/:comment_id', withAuth, (req, res) => {
+    Comment.update(
+        {
+            comment_text: req.body.comment_text
+        },
+        {
+            where: {
+                comment_id: req.params.comment_id
+            }
+        }
+    )
+    .then(dbPostData => {
+        if (!dbPostData) {
+            res.status(404).json({ message: 'No comment found with this id' });
+            return;
+        }
+        res.json(dbPostData);
+      })
+      .catch(err => {
+        console.log(err);
+        res.status(500).json(err);
+      });
+});
+
+router.delete('/:comment_id', (req, res) => { // deletes a comment
     Comment.destroy({
         where: {
-            id: req.params.id
+            comment_id: req.params.comment_id
         }
     })
     .then(dbPostData => {

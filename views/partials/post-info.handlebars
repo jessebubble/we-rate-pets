@@ -9,11 +9,11 @@
             </div>
             <p class="card-text">{{post_body}}</p>
             <div class="d-flex justify-content-center">
-                <button id="comment-btn" class="btn btn-primary">Rate My Pet!</button>
+                <a href="/post/{{id}}" id="comment-btn" class="btn btn-primary">Rate My Pet!</a>
             </div>
             <div class="d-flex justify-content-between">
                 <div id="post-by">Posted by {{user.username}} on {{format_date created_at}}</div>
-                <div id="comments-count">({{post.comments.length}}) Comment(s)</div>
+                <div id="comments-count">({{comments.length}}) Comment(s)</div>
             </div>
         </div>
     </div>
