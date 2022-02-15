@@ -21,23 +21,23 @@
       with 
       <a href="/post/{{post.id}}">{{post.comments.length}} Comment(s)</a>
     </div>
-    <button type="submit">Save Edits</button>
-    <button type="button" id="delete-post-btn" class="delete-post-btn">Delete post</button>
+    <button class="edit-comment-btn btn-primary" type="submit">Save Edits</button>
+    <button type="button" id="delete-post-btn" class="delete-post-btn  btn-primary">Delete post</button>
   </form>
 </article>
 
-<form class="comment-form">
+{{!-- <form class="comment-form">
   <div>
     <textarea name="comment-body"></textarea>
   </div>
 
   <div>
-    <button type="submit">Add comment</button>
+    <button class="btn-primary" type="submit">Add comment</button>
   </div>
 </form>
 
-{{> comments post.comments}}
+{{> comments post.comments}} --}}
 
 <script src="/javascript/edit-post.js"></script>
 <script src="/javascript/delete-post.js"></script>
-<script src="/javascript/comment.js"></script>
+{{!-- <script src="/javascript/comment.js"></script> --}}
