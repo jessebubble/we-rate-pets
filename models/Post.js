@@ -25,7 +25,7 @@ Post.init(
        // }
       },
       post_body: {
-        type: DataTypes.STRING,
+        type: DataTypes.STRING(3000),
         allowNull: false,
       },
       user_id: {
