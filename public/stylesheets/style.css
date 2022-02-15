@@ -81,7 +81,7 @@ section h2{
 }
 
 /* user comments */
-.comments, article, .comment-on-post, .create-post{
+.comments, article, .comment-on-post, .create-post, .login-form, .signup-form{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -120,4 +120,25 @@ textarea{
 
 #image-url{
     margin-bottom: 2px;
+}
+
+/* login/signup form */
+
+.login-form{
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.username-signup{
+    margin-top: 20px;
+}
+
+#password-signup, #password-login{
+    margin-left: 5px;
+    margin-top: 4px;
+}
+
+#signup-btn, #login-btn{
+    margin-top: 4px;
+    margin-bottom: 4px;
 }
