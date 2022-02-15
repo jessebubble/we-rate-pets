@@ -36,6 +36,10 @@ nav a:hover{
     color: var(--primary-bg);
 }
 
+section h2{
+    margin-top: 20px;
+}
+
 /* Cards */
 .card{
     width: 25rem;
@@ -48,8 +52,9 @@ nav a:hover{
 }
 
 .card-text{
-    margin-left: 5px;
-    margin-right: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+    background-color: rgb(134, 134, 134, 0.1);
 }
 
 .card-header{
@@ -73,4 +78,67 @@ nav a:hover{
 
 #comments-count{
     color: black;
+}
+
+/* user comments */
+.comments, article, .comment-on-post, .create-post, .login-form, .signup-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.meta{
+    background-color: var(--primary-bg);
+    color: var(--prime-text-color);
+}
+
+.comment{
+    width: 50%;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.edit-link{
+    text-decoration: none;
+}
+
+.edit-comment-btn{
+    margin-right: 50px;
+}
+
+/* forms */
+
+textarea{
+    resize: none;
+}
+
+/* Create post form */
+#post-title{
+    margin-bottom: 2px;
+    margin-left: 46px;
+}
+
+#image-url{
+    margin-bottom: 2px;
+}
+
+/* login/signup form */
+
+.login-form{
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.username-signup{
+    margin-top: 20px;
+}
+
+#password-signup, #password-login{
+    margin-left: 5px;
+    margin-top: 4px;
+}
+
+#signup-btn, #login-btn{
+    margin-top: 4px;
+    margin-bottom: 4px;
 }

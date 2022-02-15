@@ -1,32 +1,35 @@
-<section>
+<section class="create-post">
     <h2>Create New Post</h2>
     
     <form class="new-post-form">
         <div>
-        <label for="post-title">Title</label>
+        <label for="post-title">Title:</label>
         <input type="text" id="post-title" name="post-title" />
         </div>
         <div>
-        <label for="image-url">Image Link</label>
+        <label for="image-url">Image Link:</label>
         <input id="image-url" name="image-url" />
         </div>
         <div>
-        <label for="post-body">Caption</label>
-        <input id="post-body" name="post-body" />
+        <label for="post-body">Caption:</label>
+        <div>
+        <textarea cols="80" rows="8" id="post-body" name="post-body"></textarea>
         </div>
-        <button type="submit" class="btn">Create</button>
+
+        </div>
+        <button type="submit" class="btn btn-primary">Create</button>
     </form>
 </section>
 
 {{#if posts.length}}
 <section>
-  <h2>Your Posts</h2>
+  <h2 class="create-post">Your Posts</h2>
     {{#each posts as |post|}}
     {{> post-info post}}
     <div class="container-xxl">
       <div class="row">
-        <div class ="col-6">
-          <a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit post</a>
+        <div class ="col-12 d-flex justify-content-center">
+          <a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit Above Post</a>
         </div>
       </div>
     </div>

@@ -14,30 +14,18 @@
     </div>
     <div>
       <h4>Post:</h4>
-      <input name="post-body" type="text" value="{{post.post_body}}" />
+      <textarea cols="80" rows="8" name="post-body">{{post.post_body}}</textarea>
     </div>
     <div>
       from {{format_date post.created_at}}
       with 
       <a href="/post/{{post.id}}">{{post.comments.length}} Comment(s)</a>
     </div>
-    <button type="submit">Save Edits</button>
-    <button type="button" id="delete-post-btn" class="delete-post-btn">Delete post</button>
+    <button class="edit-comment-btn btn-primary" type="submit">Save Edits</button>
+    <button type="button" id="delete-post-btn" class="delete-post-btn  btn-primary">Delete post</button>
   </form>
 </article>
 
-<form class="comment-form">
-  <div>
-    <textarea name="comment-body"></textarea>
-  </div>
-
-  <div>
-    <button type="submit">Add comment</button>
-  </div>
-</form>
-
-{{> comments post.comments}}
 
 <script src="/javascript/edit-post.js"></script>
 <script src="/javascript/delete-post.js"></script>
-<script src="/javascript/comment.js"></script>
