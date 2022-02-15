@@ -142,3 +142,17 @@ textarea{
     margin-top: 4px;
     margin-bottom: 4px;
 }
+
+/* MEDIA QUERY FOR MOBILE PHONES AND SMALLER */
+@media screen and (max-width: 575px) {
+    #post-body{
+        width: 300px;
+    }
+    .card{
+        width: 20rem;
+    }
+
+    img{
+        width: 300px;
+    }
+}
