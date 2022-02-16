@@ -1,0 +1,14 @@
+<div class="comments">
+    {{#each this}}
+        <section class="comment">
+            <div class="meta">
+                by you on {{format_date created_at}}
+            </div>
+            <div class="text">
+                {{comment_text}}
+            </div>
+        </section>
+    <a href="/dashboard/edit-comment/{{comment_id}}" class="edit-link">Edit Comment</a>
+    {{/each}}
+</div>
+<hr class="solid">

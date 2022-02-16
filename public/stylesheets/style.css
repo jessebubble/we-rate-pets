@@ -1,0 +1,158 @@
+:root{
+    --primary-bg: rgb(64, 99, 255);
+    --prime-text-color: white;
+}
+
+header{
+    background-color: var(--primary-bg);
+    text-align: center;
+}
+
+header h1{
+    color: var(--prime-text-color);
+}
+
+nav{
+    font-size: 20px;
+}
+
+.nav-link{
+    text-decoration: none;
+    color: var(--prime-text-color);
+}
+
+nav a:hover{
+    color: var(--primary-bg);
+}
+
+#logout{
+    background: none;
+    border: none;
+    padding-bottom: 0;
+    color: var(--prime-text-color);
+}
+
+#logout:hover{
+    color: var(--primary-bg);
+}
+
+section h2{
+    margin-top: 20px;
+}
+
+/* Cards */
+.card{
+    width: 25rem;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.card img{
+    justify-content: center;
+}
+
+.card-text{
+    margin-left: 10px;
+    margin-right: 10px;
+    background-color: rgb(134, 134, 134, 0.1);
+}
+
+.card-header{
+    background-color: var(--primary-bg);
+    color: var(--prime-text-color);
+    text-align: center;
+}
+
+.card-header-link{
+    color: var(--prime-text-color);
+    text-decoration: none;
+}
+
+#post-by, #comments-count{
+    font-size: 14px;
+}
+
+#comment-btn{
+    margin-bottom: 20px;
+}
+
+#comments-count{
+    color: black;
+}
+
+/* user comments */
+.comments, article, .comment-on-post, .create-post, .login-form, .signup-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.meta{
+    background-color: var(--primary-bg);
+    color: var(--prime-text-color);
+}
+
+.comment{
+    width: 50%;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.edit-link{
+    text-decoration: none;
+}
+
+.edit-comment-btn{
+    margin-right: 50px;
+}
+
+/* forms */
+
+textarea{
+    resize: none;
+}
+
+/* Create post form */
+#post-title{
+    margin-bottom: 2px;
+    margin-left: 46px;
+}
+
+#image-url{
+    margin-bottom: 2px;
+}
+
+/* login/signup form */
+
+.login-form{
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.username-signup{
+    margin-top: 20px;
+}
+
+#password-signup, #password-login{
+    margin-left: 5px;
+    margin-top: 4px;
+}
+
+#signup-btn, #login-btn{
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+
+/* MEDIA QUERY FOR MOBILE PHONES AND SMALLER */
+@media screen and (max-width: 575px) {
+    #post-body{
+        width: 300px;
+    }
+    .card{
+        width: 20rem;
+    }
+
+    img{
+        width: 300px;
+    }
+}
