@@ -1,55 +1,35 @@
-# Introducing We Rate Pets!
+# We Rate Pets! 🐩 🐈 🐣 🐇
+- Full Stack application where Users can `Share` | `Comment` | `Connect` with Pet Lovers from all over the world 🌐
 
-## Description
-(update later ʕ •ᴥ•ʔ )
+## Deployment Link via Heroku 🔗
+* [Heroku Link](https://infinite-sea-93313.herokuapp.com/)
+* [Github Repo](https://github.com/jessebubble/we-rate-pets)
 
+![screenshot](./weratepets.png)
 
-## Table of Contents
-* [Installation](#installation)
-* [Usage](#usage)
-* [Collaborators](#collaborators)
-* [Tests](#tests)
-* [Repo & Deployment](#Repo-and-Deployment-via-Heroku)
+## Collaborators (Meet The Team) 🫡
+- [Courtney Evins](https://github.com/coevpen)
+- [Margaret Barrera](https://github.com/mlbarre)
+- [Jesse Hernandez](https://github.com/jessebubble)
 
-## Installation
-* This project uses a wide range of npm packages: (installing these packages require `npm install`)
-    - ` express `
-    - ` bcrypt `
-    - ` dotenv `
-    - ` express-handlebars `
-    - ` express-session `
-    - ` connect-session-sequelize `
-    - ` mysql2 `
-    - ` sequelize `
-* Installation also includes: 
-    - Node.js
-    - MySQL
+## Description 📓
+- We Rate Pets is a Social Media site built with modern Javascript | MongoDB | NodeJS/ExpressJS and more 
+- Users can upload photos of their pets 
+- Actively Engage with other Pet Lovers on the platform by leaving comments on post from the community
 
+## Resources
+* [NodeJS/ExpressJS](https://expressjs.com/)
+* [MySQL](https://www.mysql.com/)
+* [HandlebarsJS](https://handlebarsjs.com/)
+* [Express Session](https://github.com/expressjs/session)
+* [Deploy to Heroku](https://www.heroku.com/)
 
-## Requirements
-* Your project should fulfill the following requirements:
-    - Use Node.js and Express.js to create a RESTful API.
-    - Use Handlebars.js as the templating engine.
-    - Use MySQL and the Sequelize ORM for the database.
-    - Have both GET and POST routes for retrieving and adding new data.
-    - Be deployed using Heroku (with data).
-    - Use at least one new library, package, or technology that we haven’t discussed.
-    - Have a polished UI.
-    - Be responsive.
-    - Be interactive (i.e., accept and respond to user input).
-    - Have a folder structure that meets the MVC paradigm.
-    - Include authentication (express-session and cookies).
-    - Protect API keys and sensitive information with environment variables.
+- This project also used a wide range of npm packages: (installing these packages require `npm install`)
+    - ` Bcrypt `
+    - ` Dotenv `
+    - ` Connect-Session-Sequelize `
+    - ` MySQL2 `
+    - ` Sequelize ORM`
 
-## Collaborators
-* Jesse Hernandez
-* Courtney Evins
-* Margaret Barrera
-
-## Tests
- - This project doesn't include jest to be tested.
-
-## Repo and Deployment via Heroku
-* ( ◑‿◑)ɔ┏🍟--🍔┑٩(^◡^ )
-* [repo link goes here ]
-* [deploy link via heroku goes here ]
+## Pending Updates 🔮
+- Update CSS Styling 
